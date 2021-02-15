@@ -1,0 +1,732 @@
+Index: more_guest_linux.py
+===================================================================
+--- more_guest_linux.py	(revision cf7ce00af95247be66343f3dde9e16ef748a8354)
++++ more_guest_linux.py	(revision cf7ce00af95247be66343f3dde9e16ef748a8354)
+@@ -1,34 +0,0 @@
+-# starting with list we created in guest_list.py and change the set of invitations because one guest can't make it
+-guest_list = ['Lionel Messi', 'Einstein', 'Elon Musk']
+-print(guest_list)
+-
+-print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
+-print(f"Hi, {guest_list[1].title()}, would you like to come to dinner with me?\n")
+-print(f"Hi, {guest_list[2].title()}, would you like to come to dinner with me?\n")
+-
+-# Changes to original program begins here
+-
+-print(f"Oh no! Looks like {guest_list[0]} won't be able to make it, better look for someone else to invite.\n")
+-
+-guest_list[0] = 'Carl Sagan'
+-print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
+-print(f"Hi, {guest_list[1].title()}, I had to send out another set of invitations, but would you still like to come "
+-      f"to dinner with me?\n")
+-print(f"Hi, {guest_list[2].title()}, I had to send out another set of invitations, but would you still like to come "
+-      f"to dinner with me?\n")
+-
+-#3.6 changes begin here
+-print("We found a bigger table! We will be inviting more guest now!")
+-
+-guest_list.insert(0, 'James Bond')
+-guest_list.insert(2, 'Bobby Fischer')
+-guest_list.append('Magnus Carlsen')
+-
+-print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
+-print(f"Hi, {guest_list[1].title()}, would you like to come to dinner with me?\n")
+-print(f"Hi, {guest_list[2].title()}, would you like to come to dinner with me?\n")
+-print(f"Hi, {guest_list[3].title()}, would you like to come to dinner with me?\n")
+-print(f"Hi, {guest_list[4].title()}, would you like to come to dinner with me?\n")
+-print(f"Hi, {guest_list[5].title()}, would you like to come to dinner with me?\n")
+-
+-
+Index: chapter_four/moreloops.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/moreloops.py	(date 1594421181348)
++++ chapter_four/moreloops.py	(date 1594421181348)
+@@ -0,0 +1,26 @@
++# Choose a version of foods.py and write to for loops to print out each list of foods.
++
++my_foods = ['pizza', 'falafel', 'carrot cake']
++friend_foods = my_foods[:]
++
++print("My favorite foods are:")
++print(my_foods)
++
++print("\nMy friend's favorite foods are:")
++print(friend_foods)
++
++# append food
++my_foods.append('cannoli')
++friend_foods.append('ice cream')
++
++print("\nMy favorite foods are:")
++print(my_foods)
++
++print("\nMy friend's favorite foods are:")
++print(friend_foods)
++
++for food in my_foods:
++    print(food)
++
++for food in friend_foods:
++    print(food)
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"JavaScriptSettings\">\r\n    <option name=\"languageLevel\" value=\"ES6\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.8 (Python_crash_course)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision cf7ce00af95247be66343f3dde9e16ef748a8354)
++++ .idea/misc.xml	(date 1593493013332)
+@@ -3,5 +3,5 @@
+   <component name="JavaScriptSettings">
+     <option name="languageLevel" value="ES6" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (Python_crash_course)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (Python_crash_course)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: chapter_three/dinner_guests.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_three/dinner_guests.py	(date 1593900089244)
++++ chapter_three/dinner_guests.py	(date 1593900089244)
+@@ -0,0 +1,57 @@
++# starting with list we created in guest_list.py and change the set of invitations because one guest can't make it
++guest_list = ['Lionel Messi', 'Einstein', 'Elon Musk']
++print(len(guest_list))
++
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, would you like to come to dinner with me?\n")
++
++# Changes to original program begins here
++
++print(f"Oh no! Looks like {guest_list[0]} won't be able to make it, better look for someone else to invite.\n")
++
++guest_list[0] = 'Carl Sagan'
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, I had to send out another set of invitations, but would you still like to come "
++      f"to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, I had to send out another set of invitations, but would you still like to come "
++      f"to dinner with me?\n")
++
++# 3.6 changes begin here
++print("We found a bigger table! We will be inviting more guest now!")
++
++guest_list.insert(0, 'James Bond')
++guest_list.insert(2, 'Bobby Fischer')
++guest_list.append('Magnus Carlsen')
++
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[3].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[4].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[5].title()}, would you like to come to dinner with me?\n")
++len(guest_list)
++
++# 3.7 changes begin here
++print("Sorry, but I will be able to invite only two people.\n")
++
++print(f"Sorry {guest_list[0].title()}, I will have to uninvite you.\n")
++guest_list.pop(0)
++print(f"Sorry {guest_list[0].title()}, I will have to uninvite you.\n")
++guest_list.pop(0)
++print(f"Sorry {guest_list[0].title()}, I will have to uninvite you.\n")
++guest_list.pop(0)
++print(f"Sorry {guest_list[0].title()}, I will have to uninvite you.\n")
++guest_list.pop(0)
++
++print(f"Dear, {guest_list[0].title()}, you are still invited for dinner\n")
++print(f"Dear, {guest_list[1].title()}, you are still invited for dinner\n")
++
++guest_list.remove('Elon Musk')
++guest_list.remove('Magnus Carlsen')
++print(guest_list)
++
++
++#3-9 begins here
++print(len(guest_list))
++
+Index: .idea/Python_crash_course.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/venv\" />\r\n    </content>\r\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.8 (Python_crash_course)\" jdkType=\"Python SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/Python_crash_course.iml	(revision cf7ce00af95247be66343f3dde9e16ef748a8354)
++++ .idea/Python_crash_course.iml	(date 1593493013313)
+@@ -4,7 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/venv" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.8 (Python_crash_course)" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.7 (Python_crash_course)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .vscode/settings.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n    \"python.pythonPath\": \"C:\\\\ProgramData\\\\Anaconda3\\\\python.exe\"\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .vscode/settings.json	(revision cf7ce00af95247be66343f3dde9e16ef748a8354)
++++ .vscode/settings.json	(date 1593906962759)
+@@ -1,3 +1,3 @@
+ {
+-    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe"
++    "python.pythonPath": "C:\\Users\\jdxbo\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+ }
+\ No newline at end of file
+Index: chapter_four/dimensions.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/dimensions.py	(date 1594708982618)
++++ chapter_four/dimensions.py	(date 1594708982618)
+@@ -0,0 +1,3 @@
++dimensions = (100, 50)
++print(dimensions[0])
++print(dimensions[1])
+\ No newline at end of file
+Index: chapter_three/intentional_error.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_three/intentional_error.py	(date 1593907849948)
++++ chapter_three/intentional_error.py	(date 1593907849948)
+@@ -0,0 +1,6 @@
++#3-9 lists c++, Python, r, SQL, Java, Javascript, Julia, Scala
++computer_languages = ['C++', 'Python', 'R', 'SQL', 'Java', 'Javascript', 'Julia', 'Scala']
++
++
++print(computer_languages[10])
++
+Index: chapter_three/more_guest_linux.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_three/more_guest_linux.py	(date 1592459660523)
++++ chapter_three/more_guest_linux.py	(date 1592459660523)
+@@ -0,0 +1,34 @@
++# starting with list we created in guest_list.py and change the set of invitations because one guest can't make it
++guest_list = ['Lionel Messi', 'Einstein', 'Elon Musk']
++print(guest_list)
++
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, would you like to come to dinner with me?\n")
++
++# Changes to original program begins here
++
++print(f"Oh no! Looks like {guest_list[0]} won't be able to make it, better look for someone else to invite.\n")
++
++guest_list[0] = 'Carl Sagan'
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, I had to send out another set of invitations, but would you still like to come "
++      f"to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, I had to send out another set of invitations, but would you still like to come "
++      f"to dinner with me?\n")
++
++#3.6 changes begin here
++print("We found a bigger table! We will be inviting more guest now!")
++
++guest_list.insert(0, 'James Bond')
++guest_list.insert(2, 'Bobby Fischer')
++guest_list.append('Magnus Carlsen')
++
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[3].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[4].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[5].title()}, would you like to come to dinner with me?\n")
++
++
+Index: chapter_three/shrinking_guest_list.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_three/shrinking_guest_list.py	(date 1593493593273)
++++ chapter_three/shrinking_guest_list.py	(date 1593493593273)
+@@ -0,0 +1,53 @@
++# starting with list we created in guest_list.py and change the set of invitations because one guest can't make it
++guest_list = ['Lionel Messi', 'Einstein', 'Elon Musk']
++print(guest_list)
++
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, would you like to come to dinner with me?\n")
++
++# Changes to original program begins here
++
++print(f"Oh no! Looks like {guest_list[0]} won't be able to make it, better look for someone else to invite.\n")
++
++guest_list[0] = 'Carl Sagan'
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, I had to send out another set of invitations, but would you still like to come "
++      f"to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, I had to send out another set of invitations, but would you still like to come "
++      f"to dinner with me?\n")
++
++# 3.6 changes begin here
++print("We found a bigger table! We will be inviting more guest now!")
++
++guest_list.insert(0, 'James Bond')
++guest_list.insert(2, 'Bobby Fischer')
++guest_list.append('Magnus Carlsen')
++
++print(f"Hi, {guest_list[0].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[1].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[2].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[3].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[4].title()}, would you like to come to dinner with me?\n")
++print(f"Hi, {guest_list[5].title()}, would you like to come to dinner with me?\n")
++
++# 3.7 changes begin here
++print("Sorry, but I will be able to invite only two people.\n")
++
++print(f"Sorry {guest_list[0].title()}, I will have to uninvite you.\n")
++guest_list.pop(0)
++print(f"Sorry {guest_list[0].title()}, I will have to uninvite you.\n")
++guest_list.pop(0)
++print(f"Sorry {guest_list[0].title()}, I will have to uninvite you.\n")
++guest_list.pop(0)
++print(f"Sorry {guest_list[0].title()}, I will have to uninvite you.\n")
++guest_list.pop(0)
++
++print(f"Dear, {guest_list[0].title()}, you are still invited for dinner\n")
++print(f"Dear, {guest_list[1].title()}, you are still invited for dinner\n")
++
++guest_list.remove('Elon Musk')
++guest_list.remove('Magnus Carlsen')
++print(guest_list)
++
++
+Index: chapter_four/first_numbers.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/first_numbers.py	(date 1593978873660)
++++ chapter_four/first_numbers.py	(date 1593978873660)
+@@ -0,0 +1,7 @@
++#for value in range(1, 5):
++ #   print(value)  # notice how it only prints 1-4, to print 1-5 do range(1, 6)
++
++# another way to do range is range(6) and it will print out numbers 1-5
++
++numbers = list(range(1, 6))
++print(numbers)
+\ No newline at end of file
+Index: chapter_four/odd_numbers.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/odd_numbers.py	(date 1594019433412)
++++ chapter_four/odd_numbers.py	(date 1594019433412)
+@@ -0,0 +1,3 @@
++#4-6 odd numbers
++# print out a list of integers in the range from 1 to 20, but only returning odd numbers
++print(list(range(1, 21, 2)))
+Index: chapter_four/animals
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/animals	(date 1594017107666)
++++ chapter_four/animals	(date 1594017107666)
+@@ -0,0 +1,11 @@
++# 4-2 animals
++
++# list of animals
++animals = ['dog', 'cat', 'fish']
++
++# for loop for every animal in animals then print statement
++for animal in animals:
++    print(f"A {animal.title()} would make a great pet")
++
++# outside of loop since not indented
++print("All of these animals would make great pets!")
+Index: chapter_four/even_numbers
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/even_numbers	(date 1594019050728)
++++ chapter_four/even_numbers	(date 1594019050728)
+@@ -0,0 +1,3 @@
++# creating a list of integers from 2, to 10, but only returning even numbers
++even_numbers = list(range(2, 11, 2))
++print(even_numbers)
+\ No newline at end of file
+Index: chapter_four/cube_comprehension.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/cube_comprehension.py	(date 1594019699543)
++++ chapter_four/cube_comprehension.py	(date 1594019699543)
+@@ -0,0 +1,4 @@
++# 4-9 cube comprehension
++# create a list comprehension for loop to print out cubed values
++
++cube_comprehension = [print(value ** 3) for value in range(1, 11)]
+Index: chapter_four/counting_to_twenty
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/counting_to_twenty	(date 1594019050720)
++++ chapter_four/counting_to_twenty	(date 1594019050720)
+@@ -0,0 +1,6 @@
++# 4-3 counting to twenty
++# for every value in the range from 1 to 20, print that number out
++for value in range(1, 21):
++    print(value)
++# outside of loop since not indented
++print(list(range(1, 21)))
+Index: chapter_four/magicians.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/magicians.py	(date 1593975632016)
++++ chapter_four/magicians.py	(date 1593975632016)
+@@ -0,0 +1,8 @@
++magicians = ['alice', 'david', 'carolina']
++
++for magician in magicians:
++    #print(magician)
++    print(f"{magician.title()}, that was a great trick!")
++    print(f"I can't wait to see your next trick, {magician.title()}.\n")
++
++print("Thank you everyone. That was a great magic show!")
+Index: chapter_four/one_million
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/one_million	(date 1594056368388)
++++ chapter_four/one_million	(date 1594056368388)
+@@ -0,0 +1,4 @@
++# 4-4 one million
++# for every value in the range 1 to a million, print the value out(yes, from one to a million)
++for value in range(1_000_001):
++    print(value)
+Index: chapter_three/seeing_the_world.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_three/seeing_the_world.py	(date 1593899688510)
++++ chapter_three/seeing_the_world.py	(date 1593899688510)
+@@ -0,0 +1,17 @@
++#3-8 Seeing the World:
++# list of 5 places I'd like to visit. Japan, England, Spain, South Korea, Germany
++
++countries = ['japan', 'england', 'spain', 'south korea', 'germany']
++print(sorted(countries))
++print(countries)
++print(sorted(countries,reverse=True))
++print(countries)
++countries.reverse()
++print(countries)
++countries.reverse()
++print(countries)
++countries.sort()
++print(countries)
++
++countries.sort(reverse=True)
++print(countries)
+\ No newline at end of file
+Index: chapter_three/every_function.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_three/every_function.py	(date 1594056368407)
++++ chapter_three/every_function.py	(date 1594056368407)
+@@ -0,0 +1,47 @@
++# 3-9 lists c++, Python, r, SQL, Java, Javascript, Julia, Scala
++computer_languages = ['C++', 'Python', 'R', 'SQL', 'Java', 'Javascript', 'Julia', 'Scala']
++
++print(computer_languages)
++print(computer_languages[0])
++print(computer_languages[0].title())
++print(computer_languages[5])
++
++print(computer_languages[-1])  # prints out last item in index
++
++message = f"My first language I learned was {computer_languages[1]}."
++print(message)
++
++computer_languages[0] = 'MatLab'
++print(computer_languages)
++
++computer_languages.append('C++')
++print(computer_languages)
++
++computer_languages.remove('C++')
++print(computer_languages)
++
++computer_languages.insert(0, 'C++')
++print(computer_languages)
++
++del computer_languages[8] 
++print(computer_languages)
++
++popped_computer_languages = computer_languages.pop(5)
++print(popped_computer_languages)
++
++computer_languages.sort()
++print(computer_languages)
++
++computer_languages.sort(reverse=True)
++print(computer_languages)
++
++print(sorted(computer_languages))
++print(computer_languages)
++
++computer_languages.reverse()
++print(computer_languages)
++
++print(len(computer_languages))
++
++
++
+Index: chapter_four/summoning_a_million.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/summoning_a_million.py	(date 1594019050743)
++++ chapter_four/summoning_a_million.py	(date 1594019050743)
+@@ -0,0 +1,9 @@
++# 4-5 summoning a million
++# creating a variable and assigning it to a list of integers in the range from 1 to 1 million
++summoning_a_million = list(range(1,1_000_001))
++# printing out the min value
++print(min(summoning_a_million))
++# printing out max
++print(max(summoning_a_million))
++# printing out the sum
++print(sum(summoning_a_million))
+\ No newline at end of file
+Index: chapter_four/squares.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/squares.py	(date 1594015600147)
++++ chapter_four/squares.py	(date 1594015600147)
+@@ -0,0 +1,16 @@
++# squares = []
++# for value in range(1, 11):
++#     # square = value **2
++#     squares.append(value**2)
++#
++# print(squares)
++# min(squares)
++# print(squares)
++#
++# max(squares)
++# sum(squares)
++# print(squares)
++
++# comprehensive way to do for loops
++squares = [value**2 for value in range(1, 11)]
++print(squares)
+\ No newline at end of file
+Index: chapter_four/cubes.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/cubes.py	(date 1594019699537)
++++ chapter_four/cubes.py	(date 1594019699537)
+@@ -0,0 +1,5 @@
++# 4-8 cubes
++# create a for loop and cube the value then print value
++
++for value in range(1,10):
++    print(value ** 3)
+\ No newline at end of file
+Index: chapter_four/threes
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/threes	(date 1594056368398)
++++ chapter_four/threes	(date 1594056368398)
+@@ -0,0 +1,4 @@
++# 4-7 threes
++# a variable storing the value of a for loop between 1 to 30 and returning the value times 3 then prints out the values
++threes = [value * 3 for value in range(1, 31)]
++print(threes)
+Index: chapter_four/players.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/players.py	(date 1594416715344)
++++ chapter_four/players.py	(date 1594416715344)
+@@ -0,0 +1,9 @@
++# method is known as slicing
++players = ['charles', 'martina', 'michael', 'florence', 'eli']
++print(players[0:3])
++print(players[1:4])  # prints out martina to florence
++print(players[:4])  # automatically starts at beginning of list
++print(players[2:])  # started with michael and goes to end of list
++print(players[-3:])  # prints off last three elements
++# negative number returns an element a certain distance away from the end of list
++# can have a third value in slice, if there's a third value, it tells Python how many elements to skip
+Index: chapter_four/slices.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/slices.py	(date 1594417719180)
++++ chapter_four/slices.py	(date 1594417719180)
+@@ -0,0 +1,25 @@
++# 4-10 slices Take an existing program and add to it.
++# taking players.py
++# method is known as slicing
++
++players = ['charles', 'martina', 'michael', 'florence', 'eli']
++print(players[0:3])
++print(players[1:4])  # prints out martina to florence
++print(players[:4])  # automatically starts at beginning of list
++print(players[2:])  # started with michael and goes to end of list
++print(players[-3:])  # prints off last three elements
++# negative number returns an element a certain distance away from the end of list
++# can have a third value in slice, if there's a third value, it tells Python how many elements to skip
++
++print("The first three players in the list are:")
++
++for player in players[0:3]:
++    print(player)
++
++print("\nThree players in the middle are:")
++for player in players[1:4]:
++    print(player)
++
++print("\nThe last three players are:")
++for player in players[2:5]:
++    print(player)
+Index: chapter_four/Pizzas
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/Pizzas	(date 1593977535401)
++++ chapter_four/Pizzas	(date 1593977535401)
+@@ -0,0 +1,8 @@
++#4-1 Pizzas
++favorite_pizzas = ['cheese', 'pepperoni', 'sausage']
++
++for pizza in favorite_pizzas:
++    #print(pizza)
++    print(f'I like {pizza.title()} pizza.')
++
++print("I really love pizza\n")
+\ No newline at end of file
+Index: chapter_four/mypizzasyourpizzas.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/mypizzasyourpizzas.py	(date 1594418154214)
++++ chapter_four/mypizzasyourpizzas.py	(date 1594418154214)
+@@ -0,0 +1,18 @@
++# 4-11 My Pizzas, Your Pizzas: Start with program from Exercise 4-1. Make a copy of the list and call it friend_pizzas.
++# add to it
++
++favorite_pizzas = ['cheese', 'pepperoni', 'sausage']
++friends_pizzas = favorite_pizzas[:]
++
++favorite_pizzas.append('italian')
++friends_pizzas.append('Pineapple')
++
++print("My favorite pizzas are:")
++for pizza in favorite_pizzas:
++    print(f'I like {pizza.title()} pizza.')
++
++print("\nMy friends favorite pizzas are:")
++for pizza in friends_pizzas:
++    print(f'I like {pizza.title()} pizza.')
++
++print("I really love pizza\n")
+Index: chapter_four/foods.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_four/foods.py	(date 1594417544719)
++++ chapter_four/foods.py	(date 1594417544719)
+@@ -0,0 +1,18 @@
++my_foods = ['pizza', 'falafel', 'carrot cake']
++friend_foods = my_foods[:]
++
++print("My favorite foods are:")
++print(my_foods)
++
++print("\nMy friend's favorite foods are:")
++print(friend_foods)
++
++# append food
++my_foods.append('cannoli')
++friend_foods.append('ice cream')
++
++print("\nMy favorite foods are:")
++print(my_foods)
++
++print("\nMy friend's favorite foods are:")
++print(friend_foods)
+Index: chapter_three/cars.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- chapter_three/cars.py	(date 1593897606927)
++++ chapter_three/cars.py	(date 1593897606927)
+@@ -0,0 +1,24 @@
++cars = ['bmw', 'audi', 'toyota', 'subaru']
++# cars.sort()
++# print(cars)
++
++# cars = ['bmew', 'audi', 'toyota', 'subaru']
++# cars.sort(reverse=True)
++# print(cars)
++
++
++# print("\nHere is the normal list: ")
++# print(cars)
++
++# print("\nHere is the sorted list: ")
++# print(sorted(cars))
++
++# print("\nWhere is the original list again: ")
++# print(cars)
++
++print(f"\n{cars}")
++
++print(sorted(cars, reverse=True))
++
++cars.reverse()
++print(cars)
+\ No newline at end of file
