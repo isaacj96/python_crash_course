@@ -1,8 +1,9 @@
-def make_album(artist, album, songs = None):        
+def make_album(artist, album, songs=None):
     group = {'name': artist, 'album_name': album}
     if songs:
-        group['Number of sogs'] = songs
+        group['Number of songs'] = songs
     return group
+
 
 while True:
     print("\nPlease enter the Artist name")
@@ -17,8 +18,8 @@ while True:
     number_of_songs = input("Please enter number of songs: ")
     if number_of_songs == 'q':
         break
-    else: 
+    else:
         number_of_songs = int(number_of_songs)
 
-    create_album = make_album(f_artist,album_name,number_of_songs)
+    create_album = make_album(f_artist, album_name, number_of_songs)
     print(f"\n{create_album}")

@@ -31,4 +31,5 @@ pets = [Milo, Pancho, Fletcher]
 
 #Loop through each pet and it's information
 for pet in pets:
-    print(f"{pet['Name']} is a {pet['Type']}, is {pet['Age']} and is also {pet['Color']}. The owner of the pet is {pet['Owner']}.")
+    print(
+        f"{pet['Name'].title()} is a {pet['Type']}, is {pet['Age']} and is also {pet['Color']}. The owner of the pet is {pet['Owner']}.")
