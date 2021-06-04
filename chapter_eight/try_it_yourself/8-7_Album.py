@@ -1,7 +1,7 @@
-def make_album(artist, album, songs = None):        
+def make_album(artist, album, songs=None):
     group = {'name': artist, 'album_name': album}
     if songs:
-        group['Number of sogs'] = songs
+        group['Number of songs'] = songs
     return group
 
 album_one = make_album('Tame Impala', 'Lonerism')

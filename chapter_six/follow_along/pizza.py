@@ -1,4 +1,4 @@
-#Creating a list inside a dictionary to access it
+# Creating a list inside a dictionary to access it
 
 
 # Store information of a pizza being ordered.
