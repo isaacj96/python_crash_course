@@ -1,0 +1,3 @@
+In Python you can easily declare variables
+In Python you can the keyword class to create a class
+In Python you can store modules in separate files
